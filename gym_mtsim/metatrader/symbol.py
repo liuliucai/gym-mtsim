@@ -1,11 +1,12 @@
 from typing import Tuple
 
-from .interface import MtSymbolInfo
+# from .interface import MtSymbolInfo
 
 
 class SymbolInfo:
 
-    def __init__(self, info: MtSymbolInfo) -> None:
+    # def __init__(self, info: MtSymbolInfo) -> None:
+    def __init__(self, info) -> None:
         self.name: str = info.name
         self.market: str = self._get_market(info)
 
@@ -25,7 +26,8 @@ class SymbolInfo:
         return f'{self.market}/{self.name}'
 
 
-    def _get_market(self, info: MtSymbolInfo) -> str:
+    # def _get_market(self, info: MtSymbolInfo) -> str:
+    def _get_market(self, info) -> str:
         mapping = {
             'forex': 'Forex',
             'crypto': 'Crypto',

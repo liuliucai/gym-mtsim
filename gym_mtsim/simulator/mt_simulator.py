@@ -7,7 +7,8 @@ from datetime import datetime, timedelta
 import numpy as np
 import pandas as pd
 
-from ..metatrader import Timeframe, SymbolInfo, retrieve_data
+# from ..metatrader import Timeframe, SymbolInfo, retrieve_data
+from ..metatrader import SymbolInfo
 from .order import OrderType, Order
 from .exceptions import SymbolNotFound, OrderNotFound
 
@@ -51,14 +52,14 @@ class MtSimulator:
         return self.equity / margin
 
 
-    def download_data(
-            self, symbols: List[str], time_range: Tuple[datetime, datetime], timeframe: Timeframe
-        ) -> None:
-        from_dt, to_dt = time_range
-        for symbol in symbols:
-            si, df = retrieve_data(symbol, from_dt, to_dt, timeframe)
-            self.symbols_info[symbol] = si
-            self.symbols_data[symbol] = df
+    # def download_data(
+    #         self, symbols: List[str], time_range: Tuple[datetime, datetime], timeframe: Timeframe
+    #     ) -> None:
+    #     from_dt, to_dt = time_range
+    #     for symbol in symbols:
+    #         si, df = retrieve_data(symbol, from_dt, to_dt, timeframe)
+    #         self.symbols_info[symbol] = si
+    #         self.symbols_data[symbol] = df
 
 
     def save_symbols(self, filename: str) -> None:

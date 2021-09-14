@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='gym_mtsim',
-    version='1.1.0',
+    version='1.1.0-linux-mac',
     packages=find_packages(),
 
     author='AminHP',
@@ -17,7 +17,7 @@ setup(
         'plotly>=5.3.1',
         'nbformat>=5.1.3',
         'pathos>=0.2.8',
-        'MetaTrader5>=5.0.35',
+        # 'MetaTrader5>=5.0.35',
     ],
 
     package_data={
