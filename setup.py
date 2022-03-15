@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='gym_mtsim',
-    version='1.1.0-linux-mac',
+    version='1.2.0-linux-mac',
     packages=find_packages(),
 
     author='AminHP',
